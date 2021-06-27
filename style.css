@@ -1,0 +1,93 @@
+/********** Configurações gerais **********/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/********** Barra de navegação **********/
+
+nav {
+    background-color: #5d4954;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo a{
+    text-transform: uppercase;
+    color: rgb(236, 236, 236);
+    font-size: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: rgb(236, 236, 236);
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger div{
+    height: 3px;
+    width: 25px;
+    background-color: rgb(236, 236, 236);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .hamburger{
+        cursor: pointer;
+        display: block;
+    }
+    .nav-menu{
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        height: 90vh;
+        width: 50%;
+        background-color: #5d4954;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    
+}
+
+.toggle .linha1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .linha2{
+    opacity: 0;
+}
+.toggle .linha3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
